@@ -1,0 +1,39 @@
+# ---- never publish: settings, keys and anything users made
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*service-account*.json
+*client_secret*.json
+data/
+storage.json
+*.db
+*.db-wal
+*.db-shm
+*.sqlite*
+*.log
+
+# ---- this computer only
+.claude/
+CLAUDE.local.md
+.vscode/
+.idea/
+*.bat
+Thumbs.db
+.DS_Store
+
+# ---- Python & Build Artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+dist-engine/
+build-engine/
+dist-desktop/
+desktop/node_modules/
+qa_reels_output/
+ai.json
+agentvid_settings.json

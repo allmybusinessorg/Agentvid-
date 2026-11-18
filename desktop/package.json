@@ -1,0 +1,92 @@
+{
+  "name": "agentvid",
+  "productName": "AgentVid",
+  "version": "1.0.0",
+  "description": "AgentVid — AI Video Creation & Editing Studio by Creative Creature (WE.ARECC)",
+  "author": {
+    "name": "i.sayak007 — Creative Creature (WE.ARECC)",
+    "url": "https://isayak007.vercel.app/"
+  },
+  "homepage": "https://isayak007.vercel.app/",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win --x64",
+    "pack:win": "electron-builder --win --x64 --dir"
+  },
+  "devDependencies": {
+    "electron": "^35.1.5",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.creativecreature.agentvid",
+    "productName": "AgentVid",
+    "copyright": "Copyright © 2026 Creative Creature (WE.ARECC) / i.sayak007",
+    "directories": {
+      "output": "../dist-desktop",
+      "buildResources": "assets"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "splash.html",
+      "assets/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "../dist-engine/agentvid-engine",
+        "to": "engine",
+        "filter": ["**/*"]
+      },
+      {
+        "from": "../web",
+        "to": "web",
+        "filter": ["**/*"]
+      },
+      {
+        "from": "../studio/fonts",
+        "to": "fonts",
+        "filter": ["**/*"]
+      },
+      {
+        "from": "../studio/models",
+        "to": "models",
+        "filter": ["**/*"]
+      },
+      {
+        "from": "../LICENSE",
+        "to": "LICENSE"
+      },
+      {
+        "from": "../THIRD_PARTY_NOTICES.md",
+        "to": "THIRD_PARTY_NOTICES.md"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icon.ico",
+      "artifactName": "AgentVid-Setup-${version}-x64.${ext}",
+      "signAndEditExecutable": true
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "AgentVid",
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "installerHeaderIcon": "assets/icon.ico",
+      "installerSidebar": "assets/installer-sidebar.bmp",
+      "installerHeader": "assets/installer-header.bmp",
+      "license": "../LICENSE",
+      "deleteAppDataOnUninstall": false
+    }
+  }
+}

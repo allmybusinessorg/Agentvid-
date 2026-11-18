@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="4" y1="4" x2="52" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="45%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#F472B6"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="12" y1="10" x2="44" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="48" height="48" rx="13" fill="#0E1018" stroke="url(#g1)" stroke-width="1.8"/>
+  <path d="M28 13L41 41H34.8L32.1 35H23.9L21.2 41H15L28 13Z" fill="url(#g2)"/>
+  <path d="M26.2 26.5L31.4 29.5L26.2 32.5V26.5Z" fill="url(#g1)"/>
+  <text x="66" y="31" fill="#F8FAFC" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="22" font-weight="700" letter-spacing="1.6">AGENTVID</text>
+  <text x="67" y="45" fill="#94A3B8" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="500" letter-spacing="1.8">BY CREATIVE CREATURE</text>
+</svg>

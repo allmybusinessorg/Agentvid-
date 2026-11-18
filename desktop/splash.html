@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AgentVid</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%; height: 100%; overflow: hidden;
+      background: transparent; color: #f7f8fa;
+      font-family: "Segoe UI Variable Display", "Inter", "Segoe UI", system-ui, sans-serif;
+      display: grid; place-items: center;
+      user-select: none;
+    }
+    .card {
+      position: relative;
+      width: 440px; height: 288px;
+      border-radius: 16px;
+      background: #08090d;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 28px 64px rgba(0, 0, 0, 0.78), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 13px; overflow: hidden;
+    }
+    .glow {
+      position: absolute; top: -80px; width: 280px; height: 200px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 102, 255, 0.24), transparent 72%);
+      filter: blur(28px);
+      animation: breathe 3.2s ease-in-out infinite;
+    }
+    @keyframes breathe {
+      0%, 100% { transform: scale(0.92); opacity: 0.7; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+    .logo {
+      position: relative; z-index: 2;
+      width: 68px; height: 68px; border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
+    }
+    .title {
+      position: relative; z-index: 2;
+      font-size: 21px; font-weight: 750; letter-spacing: 0.2em;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%; background: #0066ff;
+      display: inline-block; margin-top: 8px;
+    }
+    .sub {
+      position: relative; z-index: 2;
+      font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: #7e8696; margin-top: -6px;
+    }
+    .bar-wrap {
+      position: relative; z-index: 2;
+      width: 220px; height: 3px; border-radius: 99px;
+      background: rgba(255, 255, 255, 0.08); overflow: hidden; margin-top: 8px;
+    }
+    .bar {
+      width: 40%; height: 100%; border-radius: 99px;
+      background: #0066ff;
+      animation: slide 1.3s ease-in-out infinite;
+    }
+    @keyframes slide {
+      0% { transform: translateX(-110%); }
+      100% { transform: translateX(270%); }
+    }
+    .status {
+      position: relative; z-index: 2;
+      font-size: 11px; color: #9aa3b2;
+    }
+    .foot {
+      position: absolute; bottom: 14px; z-index: 2;
+      font-size: 9.5px; letter-spacing: 0.12em; color: #525968;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="glow"></div>
+    <img class="logo" src="./assets/icon.png" alt="AgentVid" />
+    <div class="title">AGENTVID<span class="dot"></span></div>
+    <div class="sub">AI Video Creation &amp; Editing Studio</div>
+    <div class="bar-wrap"><div class="bar"></div></div>
+    <div class="status" id="status">Initializing local studio engine...</div>
+    <div class="foot">CREATIVE CREATURE · WE.ARECC</div>
+  </div>
+</body>
+</html>
